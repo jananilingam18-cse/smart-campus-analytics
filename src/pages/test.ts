@@ -1,0 +1,25 @@
+import React, { useState } from 'react';
+import { 
+  Activity, 
+  TrendingUp, 
+  Award, 
+  CheckCircle2, 
+  Calendar, 
+  Clock, 
+  AlertTriangle, 
+  Sparkles, 
+  ChevronRight, 
+  ChevronDown,
+  Trophy, 
+  GraduationCap, 
+  BookOpen, 
+  Star, 
+  Flame,
+  ArrowUpRight,
+  ShieldAlert,
+  ArrowRight,
+  Info,
+  Medal,
+  FileCheck,
+  Search
+} from 'recharts/node_modules/lucide-react' || import('lucide-react');

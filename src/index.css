@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Primary Palette: Violet & Lavender */
+  --theme-primary: #7C3AED;      /* Royal Violet */
+  --theme-secondary: #6D28D9;    /* Deep Violet */
+  --theme-accent: #A78BFA;       /* Soft Lavender */
+  --theme-pale: #EDE9FE;         /* Pale Lavender */
+  --theme-bg: #FAF9FF;           /* Mist White */
+  --theme-surface: #F4F0FF;      /* Soft Lilac Surface */
+  --theme-card: #FFFFFF;
+  --theme-border: #E9E4F5;       /* Subtle Border */
+  --theme-text-primary: #242038; /* Main Text */
+  --theme-text-secondary: #77738C;/* Secondary Text */
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--theme-bg);
+  color: var(--theme-text-primary);
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Theme: Royal Purple (Default) */
+body.theme-royal-purple, body.theme-violet, body.theme-classic {
+  --theme-primary: #7C3AED;
+  --theme-secondary: #6D28D9;
+  --theme-accent: #A78BFA;
+  --theme-pale: #EDE9FE;
+  --theme-surface: #F4F0FF;
+}
+
+/* Theme: Ocean Blue */
+body.theme-ocean-blue, body.theme-ocean {
+  --theme-primary: #0284C7;
+  --theme-secondary: #2563EB;
+  --theme-accent: #38BDF8;
+  --theme-pale: #E0F2FE;
+  --theme-surface: #F0F9FF;
+}
+
+/* Theme: Emerald Green */
+body.theme-emerald-green, body.theme-emerald {
+  --theme-primary: #059669;
+  --theme-secondary: #047857;
+  --theme-accent: #34D399;
+  --theme-pale: #D1FAE5;
+  --theme-surface: #ECFDF5;
+}
+
+/* Theme: Sunset Orange */
+body.theme-sunset-orange {
+  --theme-primary: #EA580C;
+  --theme-secondary: #C2410C;
+  --theme-accent: #FB923C;
+  --theme-pale: #FFEDD5;
+  --theme-surface: #FFF7ED;
+}
+
+/* Theme: Neutral */
+body.theme-neutral {
+  --theme-primary: #475569;
+  --theme-secondary: #334155;
+  --theme-accent: #94A3B8;
+  --theme-pale: #F1F5F9;
+  --theme-surface: #F8FAFC;
+}
+
+/* Dark Mode Overrides (Deep Charcoal-Purple Surfaces) */
+.dark {
+  --theme-bg: #13101E;
+  --theme-card: #1D172E;
+  --theme-surface: #241D38;
+  --theme-border: #332A50;
+  --theme-text-primary: #FAF9FF;
+  --theme-text-secondary: #A59DB8;
+  --theme-pale: #2E244A;
+}
+
+/* Font sizing scaling on html */
+html.font-sm {
+  font-size: 14px;
+}
+html.font-md {
+  font-size: 16px;
+}
+html.font-lg {
+  font-size: 18px;
+}
+html.font-xl {
+  font-size: 20px;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D2EB;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #3B315E;
+}
+
+/* Soft Lavender Mist Shadows */
+.shadow-card {
+  box-shadow: 0 4px 20px -2px rgba(109, 40, 217, 0.05), 0 2px 6px -1px rgba(36, 32, 56, 0.03);
+}
+.shadow-card-hover {
+  box-shadow: 0 12px 30px -4px rgba(124, 58, 237, 0.12), 0 4px 12px -2px rgba(109, 40, 217, 0.06);
+}
+.shadow-violet-glow {
+  box-shadow: 0 8px 24px -4px rgba(124, 58, 237, 0.35);
+}
