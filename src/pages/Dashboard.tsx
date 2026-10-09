@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BackendStudentsPanel } from '../components/BackendStudentsPanel';
 import { 
   Activity, 
   TrendingUp, 
@@ -173,6 +174,8 @@ export const Dashboard: React.FC = () => {
         <div className="absolute -right-16 -bottom-16 w-72 h-72 rounded-full bg-white/10 blur-2xl pointer-events-none" />
         <div className="absolute right-1/3 -top-12 w-60 h-60 rounded-full bg-violet-400/20 blur-3xl pointer-events-none" />
       </div>
+
+      <BackendStudentsPanel />
 
       {/* Critical Attendance Shortage Alert Banner (If Applicable) */}
       {lowAttendanceSubject && (
@@ -930,3 +933,5 @@ export const Dashboard: React.FC = () => {
     </div>
   );
 };
+
+
