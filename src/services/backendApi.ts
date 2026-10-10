@@ -11,8 +11,7 @@ export interface ApiStudent {
 }
 
 export async function fetchBackendStudents(): Promise<ApiStudent[]> {
-const response = await fetch("http://localhost:5000/api/students");
-  if (!response.ok) {
+const response = await fetch("https://campus-iq-backend-75l5.onrender.com/api/students");  if (!response.ok) {
     throw new Error(`Backend request failed: ${response.status}`);
   }
 
